@@ -1,0 +1,24 @@
+Create Low-Privilege User
+Methodology
+To set up a secure system, I created a new user account student01 with limited privileges. The task was carried
+out entirely via terminal using Linux user management commands:
+• adduser to create the account.
+• usermod to ensure the user had no sudo/admin rights.
+• groups and /etc/passwd to verify the user's access level.
+screenshot.
+
+Findings
+The user student01 was successfully created.
+Verified that student01 was not in the sudo group.
+The /etc/passwd file showed the default shell and home directory were correctly set.
+student01:x:1001:1001::/home/student01:/bin/bash
+Permissions were restricted — student01 couldn’t run commands with sudo.
+Conclusions
+Creating users without admin rights enforces the Principle of Least Privilege, which:
+• Reduces attack surface.
+• Prevents accidental system misconfigurations.
+• Enhances overall system security by compartmentalizing permissions.
+This is especially critical in penetration testing labs and shared environments like Kali VM.
+
+Name:Darryl Saji
+Register No. :2460354
